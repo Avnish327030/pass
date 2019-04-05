@@ -1,4 +1,11 @@
-<!DOCTYPE html>
+
+   
+
+  
+    
+    
+    
+    <!DOCTYPE html>
 <html>
 
 <head>
@@ -9,8 +16,11 @@
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/styles.css">
     <style>
-    h4{
+    h3{
        font-weight: bold ;
+	   font-size:22px;
+	  
+	    
 	   font-family:arial;
     }
     
@@ -20,15 +30,35 @@ function startTime() {
   var today = new Date();
  var dd = today.getDate();
 var mm = today.getMonth() + 1; //January is 0!
-
 var yyyy = today.getFullYear();
+	dd=dd+"";
+mm=mm+"";
+if(dd.length==1)
+{
+dd="0"+dd;
+}
+if(mm.length==1)
+{
+mm="0"+mm;
+}
   var h = today.getHours();
+	  var ampm = h >= 12 ? 'PM' : 'AM';
   var m = today.getMinutes();
   var s = today.getSeconds();
   m = checkTime(m);
   s = checkTime(s);
+	  if(h.length==1)
+{
+h="0"+h;
+}if(m.length==1)
+{
+m="0"+m;
+}if(s.length==1)
+{
+s="0"+s;
+}
   document.getElementById('txt').innerHTML =
-  dd+"/"+mm+"/"+yyyy+" "+h + ":" + m + ":" + s;
+  dd+"/"+mm+"/"+yyyy+" "+h + ":" + m + ":" + s+ " "+ampm;
   var t = setTimeout(startTime, 500);
 }
 function checkTime(i) {
@@ -38,40 +68,54 @@ function checkTime(i) {
 </script>
 </head>
 <body onload="startTime()">
-    <nav class="navbar navbar-default">
+
        
-           
-           
-			 <div class="navbar-header"><a style="float:right;margin-right:55%" class="navbar-brand navbar-link" href="#">Bus Pass</a>
-                <button style="float:left;border:none" class="navbar-toggle collapsed " data-toggle="collapse" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
-            </div>
-       
-</nav>
+	<img src="buss.jpeg" height="55px" width="100%">
             <h4 class="text-center text-warning bg-primary" style="color:black;margin-left:20px; margin-right:20px">Bus Pass -SLAB3</h4>
-        
-   
+
      
-            <h4 class="lead text-nowrap text-uppercase text-center">bsez03033 </h4>
-      
+            <h3 class="text-nowrap text-uppercase text-center" style="font-weight: bold">bsez03033 </h3>
 
       
-            <h4 class="lead text-nowrap text-uppercase text-center">HARISH AREKAR</h4>
+            <h3 class="text-nowrap text-center" style="font-weight: bold">Avnish Omprakash Yadav</h3>
        
 
        
-            <h4 class="lead text-nowrap text-uppercase text-center">174654 </h4>
+            <h3 class="text-nowrap  text-center" style="font-weight: bold">161050 </h3>
        
-   
-            <h4 class="lead text-nowrap text-uppercase text-center">10:30 AM-BORIVALI-W.E.H.-13</h4>
-      
- 
-            <h4 class="lead text-nowrap text-center">Issued By Capgemini Transport<br>Team</h4>
-     
 
-            <h4 id="txt" class="lead text-nowrap text-uppercase text-center" style ="font-weight: bold ;color:red"></h4>
+            <h3 class="text-nowrap text-uppercase text-center" style="font-weight: bold">10:30 AM-BORIVALI-W.E.H.-13</h3>
+      
+
+            <h3 class="text-nowrap text-center" style=" word-spacing:3px;font-weight: bold ;">Issued By Capgemini Transport<br>Team</h3>
+
+            <h3 id="txt" class="text-nowrap text-uppercase text-center" style=" font-weight: bold ;color:red"></h3>
    
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
 </body>
 
 </html>
+       
+	  
+    
+
+
+
+ 
+ 
+
+
+  
+  
+  
+    
+            
+       
+   
+           
+ 
+            
+   
+   
+
